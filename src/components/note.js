@@ -41,6 +41,8 @@ export default function Note({
           className="edit-button border-0 bg-transparent"
           onClick={() => {
             setUpdateId(id);
+            setHeading(heading);
+            setDetails(details);
             setOpenUpdateNote(true);
           }}
         >

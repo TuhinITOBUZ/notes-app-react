@@ -1,11 +1,15 @@
-export default function updateNote({
+import React from "react";
+import { useState } from "react";
+
+export default function UpdateNote({
   setOpenUpdateNote,
   heading,
   details,
-  setHeading,
-  setDetails,
   updateId,
 }) {
+  const [headingMessage, setHeadingMessage] = useState(heading);
+  const [detailsMessage, setDetailsMessage] = useState(details);
+
   async function handleSubmit(e) {
     e.preventDefault();
     if (e.target.heading.value !== "" && e.target.details.value !== "") {
@@ -44,12 +48,20 @@ export default function updateNote({
           placeholder="heading..."
           className="text-center p-2 m-2 w-[100%] overflow-auto border-2"
           type="text"
+          value={headingMessage}
+          onChange={(e) => {
+            setHeadingMessage(e.target.value);
+          }}
         />
         <textarea
           name="details"
           placeholder="Type your text here ..."
           className="p-2 m-2 w-[100%] min-h-[15rem] max-h-[25rem] overflow-auto border-2"
-        ></textarea>
+          value={detailsMessage}
+          onChange={(e) => {
+            setDetailsMessage(e.target.value);
+          }}
+        />
         <button
           type="submit"
           className="w-[20%] border-4 border-indigo-200 border-b-indigo-500"

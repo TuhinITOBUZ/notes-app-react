@@ -1,4 +1,4 @@
-export default function viewNote({ setOpenViewNote, heading, details }) {
+export default function ViewNote({ setOpenViewNote, heading, details }) {
   return (
     <div className="flex flex-col gap-2 z-20 absolute w-[100%] backdrop-blur-md h-[100%] justify-center items-center">
       <div className="close-button absolute top-0 end-0 p-3 cursor-pointer hover:scale-[1.1]">

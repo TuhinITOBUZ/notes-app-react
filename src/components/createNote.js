@@ -1,4 +1,4 @@
-export default function createNote({ setOpenCreateNote }) {
+export default function CreateNote({ setOpenCreateNote }) {
   async function handleSubmit(e) {
     e.preventDefault();
     if (e.target.heading.value !== "" && e.target.details.value !== "") {

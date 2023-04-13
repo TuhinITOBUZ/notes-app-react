@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Note from "./components/note";
-import CreateNote from "./components/createNote";
-import ViewNote from "./components/viewNote";
-import UpdateNote from "./components/updateNote";
+import Note from "./components/Note";
+import CreateNote from "./components/CreateNote";
+import ViewNote from "./components/ViewNote";
+import UpdateNote from "./components/UpdateNote";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -40,8 +40,6 @@ function App() {
           heading={heading}
           details={details}
           updateId={updateId}
-          setHeading={setHeading}
-          setDetails={setDetails}
         />
       ) : (
         ""
